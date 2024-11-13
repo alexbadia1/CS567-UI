@@ -2,8 +2,17 @@ import React from 'react';
 
 import './index.scss';
 
-function Button() {
-  return (<button />);
+interface IButtonProps {
+  text: string;
+  onClick?: () => void;
+}
+
+function Button({ text, onClick }: IButtonProps) {
+  return (
+    <button className="button" onClick={onClick}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;

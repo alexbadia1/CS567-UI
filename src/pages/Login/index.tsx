@@ -1,30 +1,60 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import TextField from '../../components/TextField';
 import Button from '../../components/Button';
 
 import './index.scss';
 
 export const Login: React.FC = () => {
+  const usernameRef = useRef(null);
+  const passwordRef = useRef(null);
+
+  const handleLogin = () => {};
+
   return (
     <div className="login">
       <div className="login__content">
-        <div className="login__content--title">MCS Degree Planner</div>
+        <div className="login__content__title">Fact Checking Feud</div>
         <div className="login__content__form">
-          <div className="login__content__form--title">
+          <div className="login__content__form__title">
             Log into your account
           </div>
-          <div className="margin-24"></div>
-          <TextField />
-          <div className="margin-24"></div>
-          <TextField />
+          <div className="margin-24" />
+          <div className="margin-24" />
 
-          <div className="margin-24"></div>
+          {/* Username */}
+          <div className="login__content__form__field">
+            <div className="login__content__form__field__label">
+              <span>
+                Username<span className="required">*</span>
+              </span>
+            </div>
+            <div className="login__content__form__field__value">
+              <input type="text" ref={usernameRef} required />
+            </div>
+          </div>
 
-          <Button />
-          <div className="margin-24"></div>
+          <div className="margin-24" />
+
+          {/* Password */}
+          <div className="login__content__form__field">
+            <div className="login__content__form__field__label">
+              <span>
+                Password<span className="required">*</span>
+              </span>
+            </div>
+            <div className="login__content__form__field__value">
+              <input type="text" ref={passwordRef} required />
+            </div>
+          </div>
+
+          <div className="margin-24" />
+          <div className="margin-24" />
+
+          <Button text="Log In" onClick={handleLogin} />
+
+          <div className="margin-24" />
           <div className="login__content__footer">
-            <Link className="login__content__footer--signup-link" to="/signup">
+            <Link className="login__content__footer--login-link" to="/signup">
               Sign up for an account
             </Link>
           </div>
@@ -33,3 +63,5 @@ export const Login: React.FC = () => {
     </div>
   );
 };
+
+// Sign up for an account

@@ -1,19 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,200&family=Lato:wght@900&display=swap');
-
-
 .login {
   width: 100vw;
   max-width: 100%;
-  height: calc(100vh - var(--navbar-height));
-  max-height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  font-family: "Fira Sans";
-  background-color: transparent;
 
   &__content {
     display: flex;
@@ -21,14 +13,12 @@
     justify-content: flex-start;
     align-items: center;
 
-    &--title {
-      font-size: 35px;
-      font-weight: 500;
+    &__title {
+      font-size: 40px;
+      font-weight: 700;
       letter-spacing: -0.008em;
-      line-height: 24px;
-      color: #dd3403;
-      padding: 52px;
-      font-family: 'Fira Sans';
+      color: var(--color-content-primary);
+      padding: 42px;
     }
 
     &__form {
@@ -36,29 +26,51 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-
-      min-width: 300px;
-
-      padding: 32px;
-
+      min-width: 420px;
+      padding: 24px 32px 32px 32px;
       background-color: #ffffff;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-      border: solid 1px #091e4224;
+      border: solid 1px var(--border-color-primary);
       border-radius: 8px;
 
-      &--title {
+      &__title {
         font-size: 20px;
-        font-weight: 500;
         letter-spacing: -0.008em;
         line-height: 24px;
-        color: #2c3e5d;
-        font-family: 'Fira Sans';
+        color: var(--color-content-secondary);
+      }
+
+      &__field {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        color: var(--color-content-primary);
+
+        &__label {
+          font-size: 16px;
+          width: 36.6666666667%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &__value {
+          font-size: 16px;
+          width: 63.3333333333%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
       }
     }
 
     &__footer {
-      &--signup-link {
-        color: #2c3e5d;
+      &--login-link {
+        color: var(--color-content-primary);
         font-family: 'Fira Sans';
         text-decoration: none;
         font-size: 14px;
@@ -70,7 +82,16 @@
   }
 }
 
+.required {
+  color: red;
+}
+
 .margin-24 {
   width: 100%;
-  height: 24px;
+  height: 16px;
+}
+
+.gutter-24 {
+  width: 100%;
+  height: 16px;
 }
