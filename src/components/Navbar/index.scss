@@ -1,0 +1,14 @@
+.nav {
+  position: fixed;
+  height: var(--navbar-height);
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid var(--border-color-primary);
+  z-index: 1;
+
+  & a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

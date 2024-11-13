@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TextField from '../lib/TextField';
-import Button from '../lib/Button';
+import TextField from '../../components/TextField';
+import Button from '../../components/Button';
 
 import './index.scss';
 

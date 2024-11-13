@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "headline": "Mock JSON",
+      "body": "This is a mock JSON",
+      "factCheckUrl": "This is a fact"
+    },
+    {
+      "id": "2",
+      "headline": "Mock JSON 2",
+      "body": "This is a mock JSON 2",
+      "factCheckUrl": "This is a fact 2"
+    },
+    {
+      "id": "3",
+      "headline": "Mock JSON 3",
+      "body": "This is a mock JSON 3",
+      "factCheckUrl": "This is a fact 3"
+    },
+    {
+      "id": "4",
+      "headline": "Mock JSON 4",
+      "body": "This is a mock JSON 4",
+      "factCheckUrl": "This is a fact 4"
+    },
+    {
+      "id": "5",
+      "headline": "Mock JSON 5",
+      "body": "This is a mock JSON 5",
+      "factCheckUrl": "This is a fact 5"
+    },
+    {
+      "id": "6",
+      "headline": "Mock JSON 6",
+      "body": "This is a mock JSON 6",
+      "factCheckUrl": "This is a fact 6"
+    },
+    {
+      "id": "7",
+      "headline": "Mock JSON 7",
+      "body": "This is a mock JSON 7",
+      "factCheckUrl": "This is a fact 7"
+    },
+    {
+      "id": "8",
+      "headline": "Mock JSON 8",
+      "body": "This is a mock JSON 8",
+      "factCheckUrl": "This is a fact 8"
+    },
+    {
+      "id": "9",
+      "headline": "Mock JSON 9",
+      "body": "This is a mock JSON 9",
+      "factCheckUrl": "This is a fact 9"
+    },
+    {
+      "id": "10",
+      "headline": "Mock JSON 10",
+      "body": "This is a mock JSON 10",
+      "factCheckUrl": "This is a fact 10"
+    }
+  ]
+}
