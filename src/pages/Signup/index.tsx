@@ -47,7 +47,7 @@ export function Signup() {
               </span>
             </div>
             <div className="signup__content__form__field__value">
-              <input type="text" ref={passwordRef} required />
+              <input type="password" ref={passwordRef} required />
             </div>
           </div>
 
@@ -61,7 +61,7 @@ export function Signup() {
               </span>
             </div>
             <div className="signup__content__form__field__value">
-              <input type="text" ref={confirmPasswordRef} required />
+              <input type="password" ref={confirmPasswordRef} required />
             </div>
           </div>
 

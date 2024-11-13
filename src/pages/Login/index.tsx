@@ -43,7 +43,7 @@ export const Login: React.FC = () => {
               </span>
             </div>
             <div className="login__content__form__field__value">
-              <input type="text" ref={passwordRef} required />
+              <input type="password" ref={passwordRef} required />
             </div>
           </div>
 
