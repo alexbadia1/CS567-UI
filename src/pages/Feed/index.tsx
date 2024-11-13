@@ -7,7 +7,6 @@ import { mockFetchArticle, mockFetchArticles } from '../../lib/mock';
 import { STALE_TIME } from '../../lib/constants';
 
 import './index.scss';
-import { Card } from '../../components/Card';
 
 export function Feed() {
   const queryClient = useQueryClient();
