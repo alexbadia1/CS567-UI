@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+
+import { AccentButton } from '../../components/AccentButton';
+import { PrimaryButton } from '../../components/PrimaryButton';
+import { Modal } from '../../components/Modal';
+
 import { fetchArticle } from '../../lib/fetch';
 import { mockFetchArticle } from '../../lib/mock';
 import { STALE_TIME } from '../../lib/constants';
 
+import survey from '../../assets/survey.json';
 import './index.scss';
-import { AccentButton } from '../../components/AccentButton';
-import { PrimaryButton } from '../../components/PrimaryButton';
+
+enum SurveyAction {
+  CANCEL,
+  SUBMIT,
+}
 
 function Article() {
+  const [showModal, setShowModal] = useState(false);
+
   const { id } = useParams();
 
   const { isPending, isError, data, error } = useQuery({
@@ -17,6 +29,9 @@ function Article() {
     queryFn: () => mockFetchArticle(id),
     staleTime: STALE_TIME,
   });
+
+  const openModal = () => setShowModal(true);
+  const closeModal = (action: SurveyAction) => setShowModal(false);
 
   if (isPending) {
     return <span>Loading...</span>;
@@ -38,13 +53,45 @@ function Article() {
                 {paragraph}
               </p>
             ))}
-            <PrimaryButton text="Fact Check Article" />
+            <div className="margin-24" />
+            <div className="margin-24" />
+            <PrimaryButton text="FACT-CHECK ARTICLE" />
+            <div className="margin-24" />
           </div>
         </article>
       </main>
       <footer>
-        <AccentButton text="Survey" />
+        <AccentButton text="TAKE SURVEY" onClick={openModal} />
       </footer>
+
+      <Modal
+        show={showModal}
+        onCancel={() => closeModal(SurveyAction.CANCEL)}
+        onSubmit={() => closeModal(SurveyAction.SUBMIT)}
+      >
+        <span className="modal-title">Survey</span>
+        <span className="modal-subtitle">
+          <i>
+            Note: You can revisit this article to change your answers at any
+            time.
+          </i>
+        </span>
+        <div className="modal-form-field">
+          <fieldset>
+            <legend>
+              Would you cite this article?<span className="required">*</span>
+            </legend>
+            <div>
+              <input type="radio" id="yes" name="drone" value="yes" />
+              <label htmlFor="yes">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no" name="drone" value="no" />
+              <label htmlFor="no">No</label>
+            </div>
+          </fieldset>
+        </div>
+      </Modal>
     </section>
   );
 }
