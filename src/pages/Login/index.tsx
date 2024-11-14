@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../components/Button';
+import { PrimaryButton } from '../../components/PrimaryButton';
+import { APP_TITLE } from '../../lib/constants';
 
 import './index.scss';
 
@@ -13,7 +14,7 @@ export const Login: React.FC = () => {
   return (
     <div className="login">
       <div className="login__content">
-        <div className="login__content__title">Fact Checking Feud</div>
+        <div className="login__content__title">{APP_TITLE}</div>
         <div className="login__content__form">
           <div className="login__content__form__title">
             Log into your account
@@ -50,7 +51,7 @@ export const Login: React.FC = () => {
           <div className="margin-24" />
           <div className="margin-24" />
 
-          <Button text="Log In" onClick={handleLogin} />
+          <PrimaryButton text="Log In" onClick={handleLogin} />
 
           <div className="margin-24" />
           <div className="login__content__footer">

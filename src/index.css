@@ -22,6 +22,15 @@
   min-height: 100vh;
 }
 
+a {
+  font-weight: 500;
+  color: var(--color-content-primary);
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   display: flex;

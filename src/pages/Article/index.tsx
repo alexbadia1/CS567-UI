@@ -6,6 +6,8 @@ import { mockFetchArticle } from '../../lib/mock';
 import { STALE_TIME } from '../../lib/constants';
 
 import './index.scss';
+import { AccentButton } from '../../components/AccentButton';
+import { PrimaryButton } from '../../components/PrimaryButton';
 
 function Article() {
   const { id } = useParams();
@@ -36,9 +38,13 @@ function Article() {
                 {paragraph}
               </p>
             ))}
+            <PrimaryButton text="Fact Check Article" />
           </div>
         </article>
       </main>
+      <footer>
+        <AccentButton text="Survey" />
+      </footer>
     </section>
   );
 }

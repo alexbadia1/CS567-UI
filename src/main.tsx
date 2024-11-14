@@ -2,14 +2,9 @@ import { createRoot } from 'react-dom/client';
 import {
   BrowserRouter,
   Route,
-  RouterProvider,
   Routes,
-  createBrowserRouter,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
-import { store } from './lib/store.ts';
 
 import { Navbar } from './components/Navbar/index.tsx';
 import { Feed } from './pages/Feed/index.tsx';
