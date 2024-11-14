@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { IArticle } from '../../lib/model';
 import { Link } from 'react-router-dom';
 import { fetchArticle } from '../../lib/fetch';
 import { mockFetchArticle, mockFetchArticles } from '../../lib/mock';
+import { IArticle } from '../../lib/model';
 import { STALE_TIME } from '../../lib/constants';
 
 import './index.scss';
@@ -18,6 +18,7 @@ export function Feed() {
     staleTime: STALE_TIME,
   });
 
+  // TODO: Fix observer
   useEffect(() => {
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
 

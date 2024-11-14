@@ -1,14 +1,10 @@
 import { createRoot } from 'react-dom/client';
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { Navbar } from './components/Navbar/index.tsx';
 import { Feed } from './pages/Feed/index.tsx';
-import {Article} from './pages/Article/index.tsx';
+import { Article } from './pages/Article/index.tsx';
 import { Login } from './pages/Login/index.tsx';
 import { Signup } from './pages/Signup/index.tsx';
 import { Fallback } from './pages/Fallback/index.tsx';
