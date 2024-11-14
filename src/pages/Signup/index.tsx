@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { PrimaryButton } from '../../components/PrimaryButton';
+import { Button } from '../../components/Button';
 import { APP_TITLE } from '../../lib/constants';
 
 import './index.scss';
@@ -113,7 +113,11 @@ export function Signup() {
           <div className="margin-24" />
           <div className="margin-24" />
 
-          <PrimaryButton text="Sign Up" onClick={handleSignup} />
+          <Button
+            classnames="primary-button"
+            text="Sign Up"
+            onClick={handleSignup}
+          />
 
           <div className="margin-24" />
           <div className="signup__content__footer">

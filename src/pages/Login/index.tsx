@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { PrimaryButton } from '../../components/PrimaryButton';
+import { Button } from '../../components/Button';
 import { APP_TITLE } from '../../lib/constants';
 
 import './index.scss';
@@ -51,7 +51,7 @@ export const Login: React.FC = () => {
           <div className="margin-24" />
           <div className="margin-24" />
 
-          <PrimaryButton text="Log In" onClick={handleLogin} />
+          <Button classnames="primary-button" text="Log In" onClick={handleLogin} />
 
           <div className="margin-24" />
           <div className="login__content__footer">

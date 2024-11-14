@@ -4,13 +4,19 @@ import './index.scss';
 
 interface IButtonProps {
   text: string;
+  classnames?: string;
   onClick?: () => void;
   style?: React.CSSProperties;
 }
 
-export function PrimaryButton({ text, onClick, style }: IButtonProps) {
+export function Button({
+  text,
+  onClick,
+  classnames,
+  style,
+}: IButtonProps) {
   return (
-    <button className="primary-button" onClick={onClick} style={style}>
+    <button className={classnames} onClick={onClick} style={style}>
       {text}
     </button>
   );

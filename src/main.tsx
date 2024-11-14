@@ -12,7 +12,7 @@ import { Login } from './pages/Login/index.tsx';
 import { Signup } from './pages/Signup/index.tsx';
 import Article from './pages/Article/index.tsx';
 
-import './index.css';
+import './index.scss';
 
 const queryClient = new QueryClient();
 

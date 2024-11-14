@@ -1,7 +1,7 @@
 import React from 'react';
+import { Button } from '../Button';
 
 import './index.scss';
-import { PrimaryButton } from '../PrimaryButton';
 
 interface IModalProps {
   show: boolean;
@@ -15,13 +15,23 @@ export function Modal({ show, onCancel, onSubmit, children }: IModalProps) {
     return (
       <div className="modal-overlay">
         <div className="modal">
-          <button className="modal-close" onClick={onCancel}>
-            &times;
-          </button>
           <div className="modal-content">{children}</div>
           <div className="margin-24" />
           <div className="margin-24" />
-          <PrimaryButton text="Save" onClick={onSubmit} />
+          <div className="modal-actions">
+            <Button
+              classnames="cancel-button"
+              text="Cancel"
+              onClick={onCancel}
+              style={{ width: '48%' }}
+            />
+            <Button
+              classnames="save-button"
+              text="Save"
+              onClick={onSubmit}
+              style={{ width: '48%' }}
+            />
+          </div>
         </div>
       </div>
     );

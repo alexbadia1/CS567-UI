@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
-import { AccentButton } from '../../components/AccentButton';
-import { PrimaryButton } from '../../components/PrimaryButton';
+import { Button } from '../../components/Button';
 import { Modal } from '../../components/Modal';
 
 import { fetchArticle } from '../../lib/fetch';
 import { mockFetchArticle } from '../../lib/mock';
 import { STALE_TIME } from '../../lib/constants';
 
-import survey from '../../assets/survey.json';
 import './index.scss';
 
 enum SurveyAction {
@@ -55,13 +52,17 @@ function Article() {
             ))}
             <div className="margin-24" />
             <div className="margin-24" />
-            <PrimaryButton text="FACT-CHECK ARTICLE" />
+            <Button classnames="primary-button" text="FACT-CHECK ARTICLE" />
             <div className="margin-24" />
           </div>
         </article>
       </main>
       <footer>
-        <AccentButton text="TAKE SURVEY" onClick={openModal} />
+        <Button
+          classnames="accent-button"
+          text="TAKE SURVEY"
+          onClick={openModal}
+        />
       </footer>
 
       <Modal
