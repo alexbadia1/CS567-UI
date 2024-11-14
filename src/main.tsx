@@ -8,6 +8,8 @@ import { Article } from './pages/Article/index.tsx';
 import { Login } from './pages/Login/index.tsx';
 import { Signup } from './pages/Signup/index.tsx';
 import { Fallback } from './pages/Fallback/index.tsx';
+// @ts-ignore
+import EyeTracker from './components/EyeTracker/index.jsx';
 
 import './index.scss';
 
@@ -20,6 +22,7 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Navbar />
+        <EyeTracker />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
