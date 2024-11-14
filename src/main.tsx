@@ -8,9 +8,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { Navbar } from './components/Navbar/index.tsx';
 import { Feed } from './pages/Feed/index.tsx';
+import {Article} from './pages/Article/index.tsx';
 import { Login } from './pages/Login/index.tsx';
 import { Signup } from './pages/Signup/index.tsx';
-import Article from './pages/Article/index.tsx';
+import { Fallback } from './pages/Fallback/index.tsx';
 
 import './index.scss';
 
@@ -28,6 +29,7 @@ root.render(
           <Route path="/signup" element={<Signup />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/articles/:id" element={<Article />} />
+          <Route path="*" element={<Fallback />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

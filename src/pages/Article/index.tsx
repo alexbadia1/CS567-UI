@@ -16,7 +16,7 @@ enum SurveyAction {
   SUBMIT,
 }
 
-function Article() {
+export function Article() {
   const [showModal, setShowModal] = useState(false);
 
   const { id } = useParams();
@@ -29,6 +29,10 @@ function Article() {
 
   const openModal = () => setShowModal(true);
   const closeModal = (action: SurveyAction) => setShowModal(false);
+
+  const handleFactcheck = () => {
+    window.open('https://www.snopes.com/', '_blank');
+  };
 
   if (isPending) {
     return <span>Loading...</span>;
@@ -52,7 +56,11 @@ function Article() {
             ))}
             <div className="margin-24" />
             <div className="margin-24" />
-            <Button classnames="primary-button" text="FACT-CHECK ARTICLE" />
+            <Button
+              classnames="primary-button"
+              text="FACT-CHECK ARTICLE"
+              onClick={() => handleFactcheck()}
+            />
             <div className="margin-24" />
           </div>
         </article>
@@ -96,5 +104,3 @@ function Article() {
     </section>
   );
 }
-
-export default Article;
