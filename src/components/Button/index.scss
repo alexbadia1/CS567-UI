@@ -43,7 +43,9 @@
 }
 
 .primary-button {
-  @include button(rgb(18, 18, 18));
+  // @include button(rgb(18, 18, 18));
+  @include button(#0A1857);
+  border-radius: 5px;
 }
 
 .cancel-button {
