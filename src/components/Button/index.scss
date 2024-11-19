@@ -50,8 +50,10 @@
 
 .cancel-button {
   @include button(#a81817);
+  border-radius: 5px;
 }
 
 .save-button {
-  @include button(#3c8a37);
+  @include button(#0A1857);
+  border-radius: 5px;
 }
