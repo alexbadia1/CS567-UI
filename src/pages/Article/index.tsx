@@ -56,22 +56,35 @@ export function Article() {
             ))}
             <div className="margin-24" />
             <div className="margin-24" />
-            <Button
+            {/* <Button
               classnames="primary-button"
               text="FACT-CHECK ARTICLE"
               onClick={() => handleFactcheck()}
             />
+             */}
+            <div className="button-container">
+              <Button
+                classnames="primary-button"
+                text="FACT-CHECK ARTICLE"
+                onClick={() => handleFactcheck()}
+              />
+              <Button
+                classnames="primary-button"
+                text="TAKE SURVEY"
+                onClick={openModal}
+              />
+            </div>
             <div className="margin-24" />
           </div>
         </article>
       </main>
-      <footer>
+      {/* <footer>
         <Button
           classnames="accent-button"
           text="TAKE SURVEY"
           onClick={openModal}
         />
-      </footer>
+      </footer> */}
 
       <Modal
         show={showModal}

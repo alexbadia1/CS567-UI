@@ -60,7 +60,7 @@
 
 .article__header {
   display: block;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;
@@ -68,8 +68,8 @@
   unicode-bidi: isolate;
   color: var(--color-content-primary);
   font-weight: 700;
-  font-style: italic;
   text-align: left;
+  text-decoration: underline;
 
   @media (min-width: 1024px) {
     max-width: none;
@@ -140,4 +140,14 @@
     margin-bottom: 0.9375rem;
     margin-top: 0;
   }
+}
+
+fieldset{
+  border:none
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; 
+  justify-content: flex-start; 
 }
