@@ -66,7 +66,7 @@ export const Login: React.FC = () => {
           ) : (
             <>
               <FormField
-                name="Username"
+                name="Email"
                 fieldType="email"
                 autoComplete="email"
                 required={true}
