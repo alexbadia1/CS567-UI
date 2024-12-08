@@ -8,6 +8,7 @@ import { Modal } from '../../components/Modal';
 import { PIXEL_OFFSET } from '../../lib/constants';
 
 import './index.scss';
+import { ToastContainer } from 'react-toastify';
 
 enum SurveyAction {
   CANCEL,
@@ -177,6 +178,19 @@ export function Article() {
           </fieldset>
         </div>
       </Modal>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="colored"
+      />
     </section>
   );
 }
