@@ -20,11 +20,15 @@
   }
 }
 
-.nav__item {
-  text-decoration: underline;
+.nav__item a {
+  text-decoration: none;
+  color: #0a0a45;
+  padding: 5px 10px;
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #0a0a45!important;
+    text-underline-offset: 4px;
   }
 }
 
@@ -37,7 +41,6 @@
   font-size: 21px;
   color: var(--color-content-primary);
   font-weight: 700;
-  font-style: italic;
   pointer-events: none;
   user-select: none;
 }

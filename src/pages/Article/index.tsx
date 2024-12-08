@@ -106,27 +106,28 @@ export function Article() {
               ))}
             <div className="margin-24" />
             <div className="margin-24" />
-            <Button
-              classnames="primary-button"
-              text="FACT-CHECK ARTICLE"
-              onClick={() => {
-                setDidFactCheck(true);
-                if (scrollInfo.current.progress > 75) {
-                  setSurveyDisabled(false);
-                }
-                window.open(
-                  article?.factCheckUrl ?? 'https://www.snopes.com/',
-                  '_blank'
-                );
-              }}
-            />
-            <div className="margin-24" />
-            <Button
-              classnames="accent-button"
-              text="TAKE SURVEY"
-              onClick={() => setShowModal(true)}
-              disabled={surveyDisabled}
-            />
+            <div className="button-container">
+              <Button
+                classnames="primary-button"
+                text="FACT-CHECK ARTICLE"
+                onClick={() => {
+                  setDidFactCheck(true);
+                  if (scrollInfo.current.progress > 75) {
+                    setSurveyDisabled(false);
+                  }
+                  window.open(
+                    article?.factCheckUrl ?? 'https://www.snopes.com/',
+                    '_blank'
+                  );
+                }}
+              />
+              <Button
+                classnames="accent-button"
+                text="TAKE SURVEY"
+                onClick={() => setShowModal(true)}
+                disabled={surveyDisabled}
+              />
+            </div>
             <div className="margin-24" />
           </div>
         </article>

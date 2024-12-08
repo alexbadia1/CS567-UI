@@ -142,7 +142,6 @@ export function Signup() {
         ref={confirmPasswordRef}
       />
       <div className="margin-24" />
-      <div className="margin-24" />
       <FormField
         name="Birthdate"
         fieldType="date"
