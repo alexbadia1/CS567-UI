@@ -95,6 +95,7 @@ export function Signup() {
             Authorization: `Bearer ${bearerToken}`,
           },
           body: JSON.stringify({
+            firebaseUid: userCredential.user.uid,
             politicalAffiliation: politicalAffiliation,
           }),
         });
