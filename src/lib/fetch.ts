@@ -2,7 +2,7 @@ import { AuthContextProps } from '../contexts/AuthProvider';
 import { ARTICLE_ENDPOINT, RANDOM_ARTICLES_ENDPOINT,  } from './constants';
 import { IArticle } from './model';
 
-async function fetchArticle(articleId: string | undefined, auth: AuthContextProps): Promise<IArticle | obj> {
+async function fetchArticle(articleId: string | undefined, auth: AuthContextProps): Promise<IArticle | object> {
   if (!articleId) {
     console.error('No article ID provided');
     return {};
@@ -17,7 +17,7 @@ async function fetchArticle(articleId: string | undefined, auth: AuthContextProp
 
   if (!bearerToken) {
     console.error('Missing bearer token');
-    return;
+    return {};
   }
 
   try {

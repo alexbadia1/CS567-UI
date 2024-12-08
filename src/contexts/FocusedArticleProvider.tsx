@@ -7,7 +7,7 @@ import { IArticle } from '../lib/model';
 import { ARTICLE_STALE_TIME } from '../lib/constants';
 
 interface FocusedArticleContextProps {
-  data: IArticle | undefined;
+  data: any | IArticle | undefined;
   isPending: boolean;
   isError: boolean;
   error: Error | null;
