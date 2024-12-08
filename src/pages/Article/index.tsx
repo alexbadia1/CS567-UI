@@ -106,7 +106,6 @@ export function Article() {
               ))}
             <div className="margin-24" />
             <div className="margin-24" />
-            <div className="button-container">
             <Button
               classnames="primary-button"
               text="FACT-CHECK ARTICLE"
@@ -121,14 +120,13 @@ export function Article() {
                 );
               }}
             />
-            {/* <div className="margin-24" /> */}
+            <div className="margin-24" />
             <Button
-              classnames="primary-button"
+              classnames="accent-button"
               text="TAKE SURVEY"
               onClick={() => setShowModal(true)}
               disabled={surveyDisabled}
             />
-            </div>
             <div className="margin-24" />
           </div>
         </article>
