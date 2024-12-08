@@ -1,0 +1,43 @@
+.nav {
+  position: fixed;
+  height: var(--navbar-height);
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid var(--border-color-primary);
+  z-index: 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__actions--leading {
+    padding: 0px 32px;
+  }
+
+  &__actions--trailing {
+    padding: 0px 32px;
+  }
+}
+
+.nav__item {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.expand {
+  flex: 1;
+}
+
+.app-title {
+  display: block;
+  font-size: 21px;
+  color: var(--color-content-primary);
+  font-weight: 700;
+  font-style: italic;
+  pointer-events: none;
+  user-select: none;
+}
