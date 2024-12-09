@@ -100,7 +100,7 @@
 }
 
 
-input,select{
+input[type="email"],input[type="password"],input[type="date"],select{
   margin-left:5%;
   font-family: "Poppins","Montserrat", sans-serif ;
   border:1px solid #ccc;
@@ -110,7 +110,7 @@ input,select{
   height:25px;
   margin-bottom:5%;
   }
-  input:focus,select:focus {
+  input[type="email"]:focus,input[type="password"]:focus,input[type="date"]:focus,select:focus {
     outline: none;
     border-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) 
